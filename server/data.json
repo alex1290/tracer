@@ -1,0 +1,251 @@
+{
+  "Items": [
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591874087896"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591874089204"
+              },
+              "path": {
+                "S": "/contact"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "S": "false"
+      },
+      "id": {
+        "N": "3"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591870914749"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591870918377"
+              },
+              "path": {
+                "S": "/contact"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "S": "false"
+      },
+      "id": {
+        "N": "2"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591874093113"
+              },
+              "path": {
+                "S": "/"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591874094775"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591874095355"
+              },
+              "path": {
+                "S": "/contact"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "S": "false"
+      },
+      "id": {
+        "N": "4"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591950258876"
+              },
+              "path": {
+                "S": "/"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591950263876"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591950265485"
+              },
+              "path": {
+                "S": "/products/WiCanvasIndoor/Air43"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "BOOL": true
+      },
+      "id": {
+        "N": "6"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591870905430"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "BOOL": false
+      },
+      "id": {
+        "N": "1"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591870575306"
+              },
+              "path": {
+                "S": "/products"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "S": "false"
+      },
+      "id": {
+        "N": "0"
+      },
+      "traceId": {
+        "S": ""
+      }
+    },
+    {
+      "trace": {
+        "L": [
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591950080411"
+              },
+              "path": {
+                "S": "/"
+              }
+            }
+          },
+          {
+            "M": {
+              "timeStamp": {
+                "N": "1591950083312"
+              },
+              "path": {
+                "S": "/contact"
+              }
+            }
+          }
+        ]
+      },
+      "inTraceList": {
+        "S": "false"
+      },
+      "id": {
+        "N": "5"
+      },
+      "traceId": {
+        "S": ""
+      }
+    }
+  ],
+  "Count": 7,
+  "ScannedCount": 7
+}

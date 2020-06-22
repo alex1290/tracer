@@ -1,3 +1,6 @@
 {
-  "exec": "babel-node ./server/server.js"
+  "exec": "babel-node ./server/server.js",
+  "ignore": [
+    "server/result.json"
+  ]
 }

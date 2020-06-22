@@ -1,0 +1,16 @@
+.menu {
+    background-color: rgba(0, 0, 0, .87)!important;
+    height: 100vh;
+}
+
+.menu a {
+    color: rgba(255, 255, 255, .5)!important;
+    /* border-color: rgba(255, 255, 255, .5)!important; */
+    width: 90%;
+    margin-bottom: 10px!important;
+}
+
+.menu a.active {
+    color: white!important;
+    /* border-color: white!important; */
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif !important;
+}
+
+a{
+    cursor: pointer;
+}
+/* table{
+    border-collapse: collapse;
+} */
+
+/* th,td{
+    padding: 5px 6px;
+    border: 1px solid #000;
+    white-space: pre-line;
+} */
+
+.id {
+    color: blue;
+    cursor: pointer;
+}
+
+.singleData {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.second {
+    text-align: right;
+}
+
+button{
+    padding: 5px 12px;
+}

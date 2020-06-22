@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 AWS.config.loadFromPath("./config.json");
-var dynamodb = new AWS.DynamoDB()
+var dynamodb = new AWS.DynamoDB.DocumentClient()
 
 export const write = trace =>
     new Promise((res, rej) => {
@@ -9,7 +9,7 @@ export const write = trace =>
                 TableName: "tracer",
                 Item: trace
             }
-            dynamodb.putItem(params, (err, data) => {
+            dynamodb.put(params, (err, data) => {
                 if (err) {
                     console.error("Unable to write data. Error JSON:", JSON.stringify(err, null, 2));
                     res(false)
@@ -29,13 +29,10 @@ export const scan = (isAmount = true) =>
         try {
             var params = {
                 TableName: "tracer",
-                ProjectionExpression: "id,#nm",
+                ProjectionExpression: "id,traceId,trace,traceType,inTraceList,startTime,endTime",
                 FilterExpression: "id >= :num1",
-                ExpressionAttributeNames: {
-                    "#nm": "name",
-                },
                 ExpressionAttributeValues: {
-                    ":num1": { "N": "0" },
+                    ":num1": 0,
                 }
             };
             let amount = 0
@@ -50,9 +47,8 @@ export const scan = (isAmount = true) =>
                     if (isAmount) {
                         amount += data.Items.length
                     } else {
-                        data.Items.forEach(function (data) {
-                            console.log(data)
-                        });
+                        data.Items.sort((a,b)=>b.id-a.id)
+                        console.log(data)
                     }
                     // continue scanning if we have more, because
                     // scan can retrieve a maximum of 1MB of data
@@ -68,6 +64,28 @@ export const scan = (isAmount = true) =>
                             res(data)
                         }
                     }
+                }
+            });
+        } catch (e) {
+            rej(e)
+        }
+    })
+
+export const dbDelete = id =>
+    new Promise((res, rej) => {
+        try {
+            var params = {
+                TableName: "tracer",
+                Key: {
+                    id
+                }
+            };
+           // console.log(`delete id :  ${id}`);
+            dynamodb.delete(params, (err, data) => {
+                if (err) {
+                    console.error("Unable to delete item. Error JSON:", JSON.stringify(err, null, 2));
+                } else {
+                    console.log("DeleteItem succeeded:", JSON.stringify(data, null, 2));
                 }
             });
         } catch (e) {
